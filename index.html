@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Reemplaza el enlace antiguo de Google Fonts por este -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<!-- Carga de Iconos Font Awesome para el Reproductor -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+
+
+<!-- CONTENEDOR DE PUERTAS DE BIENVENIDA Y SELLO -->
+<div id="pantalla-puertas" class="puertas-overlay">
+    <div class="puerta puerta-izquierda"></div>
+    <div class="puerta puerta-derecha"></div>
+    
+    <div id="btn-abrir-puertas" class="sello-contenedor">
+        <span class="puerta-texto-superior">NOS COMPLACE INVITARLOS A</span>
+        <img src="imagenes/sello.png" alt="Sello" class="sello-imagen">
+        <span class="puerta-texto-inferior">LA BODA DE</span>
+    </div>
+</div>
+
+
+
+<!-- REPRODUCTOR DE MÚSICA FLOTANTE E INTERACTIVO -->
+<div class="player-flotante-container">
+    <audio id="musica-boda" preload="auto"></audio>
+    
+    <!-- Botón Principal Flotante (Con tu logo personalizado) -->
+<button id="btn-musica" class="btn-logo-musica" aria-label="Abrir reproductor">
+    <img src="imagenes/musica.png" id="logo-reproductor" class="logo-girando" alt="Logo Música">
+</button>
+
+    <!-- Menú Desplegable con Controles -->
+    <div id="music-menu" class="music-menu-dropdown hidden">
+        <button id="prev-btn" class="music-ctrl-btn" aria-label="Anterior">
+            <i class="fas fa-step-backward"></i>
+        </button>
+
+        <button id="play-pause-btn" class="music-ctrl-btn" aria-label="Reproducir o Pausar">
+            <i class="fas fa-play"></i>
+        </button>
+
+        <button id="next-btn" class="music-ctrl-btn" aria-label="Siguiente">
+            <i class="fas fa-step-forward"></i>
+        </button>
+    </div>
+</div>
+
+
+    <section class="portada-seccion">
+    <div class="portada-contenido">
+        <h1 class="portada-nombres-novios">
+            
+            <span class="portada-salto-fino"></span>
+            <span>Uriel</span>
+            <span class="portada-salto-fino"></span>
+            <span>&</span>
+            <span class="portada-salto-fino"></span>
+            <span>Jacqueline</span>     
+        </h1>          
+    </div>
+</section>
+
+        <div class="portada-contador">
+            <p class="portada-solo-falta">Solo falta</p>
+            <div id="cuenta-regresiva" class="portada-reloj">
+                <div class="portada-unidad">
+                    <span id="dias">00</span>
+                    <p>Días</p>
+                </div>
+                <div class="portada-unidad">
+                    <span id="horas">00</span>
+                    <p>Horas</p>
+                </div>
+                <div class="portada-unidad">
+                    <span id="minutos">00</span>
+                    <p>Min</p>
+                </div>
+                <div class="portada-unidad">
+                    <span id="segundos">00</span>
+                    <p>Seg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="historia-seccion reveal-item">
+        <div class="historia-contenedor">
+            <h3 class="historia-titulo">Nuestra Historia</h3>
+            <p class="historia-frase">
+                El amor no se busca, se encuentra.<br>
+                Y nosotros nos encontramos para caminar juntos
+                el resto de nuestras vidas.
+            </p>
+
+            <div class="historia-foto-contenedor">
+                <img src="imagenes/IMG_3800.JPG" alt="Nosotros" class="historia-foto">
+            </div>
+
+            <div class="historia-cita-biblica">
+                <p class="historia-texto-biblico">
+                    "Mejor son dos que uno solo, porque tienen un mayor beneficio por su duro trabajo. 
+                    Y es que, si uno de ellos cae, el otro puede ayudar a su compañero a levantarse."
+                </p>
+                <p class="historia-referencia-biblica">Eclesiastés 4:9, 10</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="momentos-seccion reveal-item">
+        <h3 class="momentos-titulo">Nuestros Momentos</h3>
+        
+        <div class="marat-carrusel-pantalla">
+            <div class="marat-carrusel-tira" id="tiraFotos">
+
+                <img src="imagenes/fotoc2.jpg" alt="2-dup" data-frase="Capítulo 1: Antes de encontrarnos..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc5.jpg" alt="5-dup" data-frase="Capítulo 2: Cuando quererte ya no era opción, solo tiempo..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc1.jpg" alt="1-dup" data-frase="Capítulo 3: Después de tanto tiempo, tomó sentido la espera..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc3.jpg" alt="3-dup" data-frase="Capítulo 4: Más que novios, compañeros de vida..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc4.jpg" alt="4-dup" data-frase="Capítulo 5: La petición formal..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc6.jpg" alt="6-dup" data-frase="Capítulo 6: A nada del  'Para Siempre'..." onclick="abrirFoto(this)">
+                
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+
+		<img src="imagenes/fotoc2.jpg" alt="2-dup" data-frase="Capítulo 1: Antes de encontrarnos..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc5.jpg" alt="5-dup" data-frase="Capítulo 2: Cuando quererte ya no era opción, solo tiempo..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc1.jpg" alt="1-dup" data-frase="Capítulo 3: Después de tanto tiempo, tomó sentido la espera..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc3.jpg" alt="3-dup" data-frase="Capítulo 4: Más que novios, compañeros de vida..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc4.jpg" alt="4-dup" data-frase="Capítulo 5: La petición formal..." onclick="abrirFoto(this)">
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+
+                <img src="imagenes/fotoc6.jpg" alt="6-dup" data-frase="Capítulo 6: A nada del  'Para Siempre'..." onclick="abrirFoto(this)">
+                
+
+                <!-- CÓDIGO NUEVO -->
+<img src="imagenes/separador-removebg-preview-1.png" alt="Separador U&J" class="marat-separador-corazon">
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox-overlay" onclick="cerrarFoto()">
+        <div class="lightbox-marco" onclick="event.stopPropagation()">
+            <img id="foto-popup" src="" alt="Popup">
+            <div class="lightbox-texto">
+                <p id="frase-popup" class="frase-vintage"></p>
+            </div>
+        </div>
+    </div>
+
+    <section class="padres-seccion reveal-item">
+        <div class="padres-contenedor">
+            <h3 class="padres-titulo">Padres</h3>
+            <div class="padres-grid">
+                <div class="padres-familia">
+                    <p><strong>Padres del Novio</strong></p>
+                    <p>Jorge Farfán Hernández</p>
+                    <p>Celina Velázquez Durán</p>
+                </div>
+                <div class="padres-familia">
+                    <p><strong>Padres de la Novia</strong></p>
+                    <p>Jesús Tanganzuan Armenta Carmona</p>
+                    <p>Berenice Peñaloza Solano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="separador-frase-seccion reveal-item">
+        <div class="separador-frase-bloque">
+            <p class="separador-frase-texto">
+                "2025: Inolvidable 2025. Tras una pausa en el tiempo, nuestros corazones supieron que era hora de reescribir nuestra historia, sin comas, sin puntos, solo un 'juntos para siempre'."
+            </p>
+        </div>
+    </section>
+
+    <section class="programa-seccion reveal-item">
+        <div class="programa-contenedor">
+            <h2 class="programa-titulo">Programa</h2>
+            
+            <div class="programa-grid">
+                <div class="programa-columna">
+                    <div class="programa-item">
+                        <img src="imagenes/anillos.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Discurso</h3>
+                            <p>14:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="programa-item">
+                        <img src="imagenes/invitado.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Recepción</h3>
+                            <p>18:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="programa-item">
+                        <img src="imagenes/banquete.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Comida</h3>
+                            <p>18:30 PM</p>
+                        </div>
+                    </div>
+		</div>
+			<div class="programa-columna">
+                    <div class="programa-item">
+                        <img src="imagenes/vals.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Vals</h3>
+                            <p>19:10 PM</p>
+                        </div>
+                    </div>
+
+
+                    <div class="programa-item">
+                        <img src="imagenes/bola.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Baile</h3>
+                            <p>19:20 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="programa-item">
+                        <img src="imagenes/pastel.png" alt="" class="programa-icono">
+                        <div class="programa-texto">
+                            <h3>Pastel</h3>
+                            <p>21:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destacado-foto-seccion reveal-item">
+        <div class="destacado-foto-contenedor">
+            <img src="imagenes/foto6.jpg" alt="Aventura en la naturaleza" class="destacado-foto-fondo">
+            <div class="destacado-foto-degradado"></div>
+            <div class="destacado-foto-bloque-texto">
+                <p class="destacado-foto-texto">
+                    “Eres el 'para siempre' que siempre soñé”.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="vestimenta-seccion reveal-item">
+        <div class="vestimenta-contenedor">
+            <h3 class="vestimenta-titulo" style="margin-top: 0; margin-bottom: 10px;">Código <br>de<br> Vestimenta</h3>
+            
+            <div class="vestimenta-columnas">
+                <div class="vestimenta-columna">
+                    <p class="vestimenta-subtitulo" style="margin: 0; padding: 0; font-size: 1.8rem;">Hombres</p>
+                    <img src="imagenes/traje.PNG" alt="Traje Formal" class="vestimenta-icono">
+                    <p class="vestimenta-etiqueta">FORMAL</p>
+                </div>
+
+                <div class="vestimenta-columna">
+                    <p class="vestimenta-subtitulo" style="margin: 0; padding: 0; font-size: 1.8rem;">Mujeres</p>
+                    <img src="imagenes/vestido.PNG" alt="Vestido Formal" class="vestimenta-icono">
+                    <p class="vestimenta-etiqueta">FORMAL</p>
+                </div>
+            </div>
+            
+            <div class="vestimenta-restricciones">
+                <p class="vestimenta-titulo-evitar">Para los invitados, agradecemos tomar en cuenta lo siguiente:</p>
+
+                <!-- Botón dentro de la misma sección restricciones -->
+                <button type="button" id="btn-toggle-vestimenta" class="btn-vestimenta-leer">
+                    <i class="fas fa-exclamation-circle"></i> POR FAVOR LEER
+                </button>
+
+                <!-- El texto completo sobrio y la paleta ocultos inicialmente dentro del contenedor -->
+                <div id="mensaje-vestimenta-desplegable" class="mensaje-vestimenta-oculto">
+                    <p class="vestimenta-lista-no" style="margin-top: 15px;">
+                        La Biblia nos anima a vestirnos “con modestia y buen juicio”. <br>(1 Timoteo 2:9) <br>
+                        Por lo que deseamos que nuestra apariencia refleje respeto por Jehová y por la ocasión. Por ello, agradecemos elegir vestidos formales, modestos y apropiados, evitando prendas demasiado provocativas, reveladoras o que llamen indebidamente la atención. Asimismo para los caballeros, queremos que la vestimenta sea elegante y siempre demuestre el respeto que pedimos para la ocasión.
+                    </p>
+
+                    <p class="vestimenta-lista-no" style="margin-top: 20px; margin-bottom: 5px;">COLORES RESERVADOS PARA LA NOVIA Y SUS DAMAS:</p>
+                    <div class="vestimenta-paleta">
+                        <div class="vestimenta-color-prohibido">
+                            <div class="vestimenta-circulo color-blanco"></div>
+                            <span>BLANCO</span>
+                        </div>
+                        <div class="vestimenta-color-prohibido">
+                            <div class="vestimenta-circulo color-rojo"></div>
+                            <span>ROJO</span>
+                        </div>
+                        <div class="vestimenta-color-prohibido">
+                            <div class="vestimenta-circulo color-beige"></div>
+                            <span>BEIGE</span>
+                        </div>
+                        <div class="vestimenta-color-prohibido">
+                            <div class="vestimenta-circulo color-plata"></div>
+                            <span>PLATEADO</span>
+                        </div>
+                        <div class="vestimenta-color-prohibido">
+                            <div class="vestimenta-circulo color-azul-marino"></div>
+                            <span>AZUL MARINO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="separador-collage">
+    <div class="capa-textura"></div>
+    
+    <!-- Fotos del collage (4 en total) -->
+    <div class="foto-principal"> 
+        <img src="imagenes/foto3.jpg" alt="Foto Novios Principal"> 
+    </div>
+    
+    <div class="foto-secundaria"> 
+        <img src="imagenes/foto5.jpg" alt="Foto Detalle Manos"> 
+    </div>
+
+    <div class="foto-tercera"> 
+        <img src="imagenes/foto2.jpg" alt="Foto Momento Especial"> 
+    </div>
+
+    <div class="foto-cuarta"> 
+        <img src="imagenes/foto4.jpg" alt="Foto Abrazo"> 
+    </div>
+    
+</div>
+
+
+   <section class="regalos-seccion reveal-item">
+    <div class="regalos-contenedor">
+        <h2 class="regalos-titulo">Mesa de Regalos</h2>
+
+        <p class="regalos-subtitulo-cursiva">
+            Lo más importante es tu presencia, pero si deseas hacernos un obsequio, será muy bien recibido.
+        </p>
+
+        <!-- Opciones de Tiendas sin cuadro ni texto, solo icono interactivo -->
+        <div class="regalos-tiendas-grid">
+            <!-- Botón Amazon -->
+            <a href="https://www.amazon.com.mx/wedding/share/Uriel-Jacqui" target="_blank" rel="noopener noreferrer" class="regalos-tarjeta-tienda" aria-label="Mesa de Regalos Amazon">
+                <img src="imagenes/AMA.PNG" alt="Amazon" class="regalos-logo-img">
+            </a>
+
+        
+        </div>
+
+        <!-- Sección Lluvia de Sobres -->
+        <div class="regalos-lluvia-sobres">
+            <h3 class="regalos-titulo-sobres">LLUVIA DE SOBRES</h3>
+            
+            <div class="regalos-icono-sobre">
+                <img src="imagenes/sobre.png" alt="Lluvia de sobres" class="regalos-imagen-sobre">
+            </div>
+
+            <p class="regalos-texto-sobres-cursiva">
+                Contaremos con un cofre el día del evento para depositar sus presentes en efectivo.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- SECCIÓN UBICACIONES ACTUALIZADA -->
+    <section class="ubicaciones-seccion reveal-item">
+        <div class="ubicaciones-contenedor">
+            <h2 class="ubicaciones-titulo">Lugar de la Cita</h2>
+
+            <div class="ubicaciones-grid">
+                <!-- Columna 1: Discurso -->
+                <div class="ubicaciones-columna">
+                    <span class="ubicaciones-encabezado">DISCURSO</span>
+                    <a href="https://maps.app.goo.gl/uiHvKZPeH4ZKSTnw6" target="_blank" rel="noopener noreferrer" class="ubicaciones-btn-tarjeta" aria-label="Ubicación Discurso">
+                        <img src="imagenes/discurso.png" alt="Discurso" class="ubicaciones-icono">
+                    </a>
+                    <span class="ubicaciones-lugar">Salón del Reino de Los Testigos de Jehová</span>
+                    <span class="ubicaciones-horario">14:00 hrs</span>
+                </div>
+
+                <!-- Separador Vertical Dorado -->
+                <div class="ubicaciones-separador-vertical"></div>
+
+                <!-- Columna 2: Fiesta -->
+                <div class="ubicaciones-columna">
+                    <span class="ubicaciones-encabezado">FIESTA</span>
+                    <a href="https://maps.app.goo.gl/gC8XGan47cq6tLgU8" target="_blank" rel="noopener noreferrer" class="ubicaciones-btn-tarjeta" aria-label="Ubicación Fiesta">
+                        <img src="imagenes/ubi.png" alt="Hacienda Morelos" class="ubicaciones-icono">
+                    </a>
+                    <span class="ubicaciones-lugar">Hacienda Morelos</span>
+                    <span class="ubicaciones-horario">18:00 hrs</span>
+                </div>
+            </div>
+
+
+  <hr class="separador-dorado">
+
+  <h2 class="ubicaciones-titulo2">Fecha</h2>
+  <p class="fecha-evento">21 de noviembre de 2026</p>
+  <blockquote class="cita-biblica">
+    "POR LO TANTO, LO QUE DIOS HA UNIDO, QUE NO LO SEPARE NINGÚN HOMBRE."
+    <cite>MARCOS 10:9</cite>
+  </blockquote>
+
+
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       15. SECCIÓN: COLLAGE POLAROID FINAL
+       ========================================================================== -->
+    <section class="polaroid-seccion reveal-item">
+        <div class="polaroid-corazon-container">
+            <div class="tarjeta-polaroid">
+                <div class="polaroid-foto-wrapper">
+                    <img src="imagenes/cora2.png" alt="Nuestros Momentos" class="foto-polaroid">
+                </div>
+                <div class="polaroid-texto">
+                    Nuestra Historia de Amor
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+
+    <section class="pases-seccion reveal-item">
+    <div class="pases-contenedor pases-contenedor-ajustado">
+        <p class="pases-texto-familia"><span id="displayFamilia" style="font-weight: bold;"></span></p>
+        <p class="pases-texto-bajada">Hemos reservado con cariño:</p>
+        <div class="pases-contador">
+            <span id="cantidadPases">0</span>
+        </div>
+        <p class="pases-texto-etiqueta">PASES</p>
+    </div>
+</section>
+
+
+
+
+    <section class="rsvp-seccion rsvp reveal-item">
+        <div class="rsvp-contenedor">
+            <h2 class="rsvp-titulo">Confirmar Asistencia</h2>
+
+            <!-- CÓDIGO A REEMPLAZAR EN INDEX.HTML -->
+<form id="form-asistencia" action="https://script.google.com/macros/s/AKfycbw76pVcOXDmNHayxJFGmmzboo8oAZ5CNDBS6BUH9PaauO29h7P4MeSBgvXu2UUQcwOnrQ/exec" method="POST" target="iframe-oculto">
+    <input type="hidden" name="Familia" id="inputFamilia">
+    <input type="hidden" name="Pases_Asignados" id="inputPases">
+    <input type="hidden" name="ID" id="inputID">
+
+                <div class="rsvp-campo-form">
+                    <label>¿Contamos con tu asistencia?</label>
+                    <div class="rsvp-opciones-asistencia">
+                        <label class="rsvp-radio-card">
+                            <input type="radio" name="Asistencia" value="Si" required>
+                            <div class="rsvp-radio-contenido">
+                                <span>Sí, ahí estaremos</span>
+                            </div>
+                        </label>
+                        <label class="rsvp-radio-card">
+                            <input type="radio" name="Asistencia" value="No">
+                            <div class="rsvp-radio-contenido">
+                                <span>No podremos asistir</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="mensaje-despedida" style="display: none; color: var(--dorado); font-weight: bold; margin: 20px 0; font-size: 1.1rem;">
+                    ¡Muchas gracias por avisarnos! Te extrañaremos en nuestro día.
+                </div>
+
+                <div id="campos-asistencia-si">
+                    <div class="rsvp-campo-form">
+                        <label>¿Cuántos pases usarán?</label>
+                        <input type="number" name="Pases_Confirmados" id="confirmados" min="1" placeholder="Ej. 2">
+                        <small id="errorPases" class="error-msg" style="color: #d9534f; display: none; font-weight: bold;"></small>
+                    </div>
+
+                    <div id="contenedor-nombres-dinamicos"></div>
+                </div>
+
+                <button type="submit" id="btnEnviar" class="rsvp-btn-confirmar">ENVIAR CONFIRMACIÓN</button>
+            </form>
+<iframe name="iframe-oculto" id="iframe-oculto" style="display:none;"></iframe>
+            <p id="mensaje-exito" style="display:none;" class="exito-msg">¡Tu respuesta ha sido enviada con éxito!</p>
+        </div>
+    </section>
+
+    <div id="modal-confirmacion" class="modal-overlay">
+        <div class="modal-contenido">
+            <h3 class="modal-titulo">¿Tus datos son correctos?</h3>
+            <p>Por favor, revisa que los nombres y la cantidad de pases sean los indicados antes de enviar.</p>
+            
+            <div class="modal-botones">
+                <button id="btn-corregir" class="modal-btn-secundario">CORREGIR</button>
+                <button id="btn-todo-bien" class="modal-btn-dorado">SÍ, ENVIAR</button>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="btn-reset-pruebas" style="display: none; margin-top: 20px; background: #555; color: white; padding: 5px 10px; border: none; font-size: 0.7rem; border-radius: 5px; cursor: pointer; opacity: 0.5;">
+        REINICIAR FORMULARIO (PRUEBAS)
+    </button>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
