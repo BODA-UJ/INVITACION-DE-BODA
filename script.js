@@ -67,7 +67,7 @@ const API_URL="https://script.google.com/macros/s/AKfycbw76pVcOXDmNHayxJFGmmzboo
 "HER-ELI-4": { nombre: "FAMILIA HERNANDEZ ELIAS", pases: 4 },
 "VEL-DUR-7": { nombre: "FAMILIA VELAZQUEZ DURAN", pases: 7 },
 "PRA-CAR-4": { nombre: "FAMILIA PRADO CARRILLO", pases: 4 },
-"FAR-HER-4": { nombre: "FARFAN HERNANDEZ", pases: 4 },
+"FAR-HER-4": { nombre: "FAMILIA FARFAN HERNANDEZ", pases: 4 },
 "FAR-LOP-2": { nombre: "FAMILIA FARFAN LOPEZ", pases: 2 },
 "LOE-2": { nombre: "FAMILIA LOEZA", pases: 2 },
 "EZI-1": { nombre: "ZIQUIA", pases: 1 },
