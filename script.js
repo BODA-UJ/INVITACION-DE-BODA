@@ -75,7 +75,7 @@ const API_URL="https://script.google.com/macros/s/AKfycbw76pVcOXDmNHayxJFGmmzboo
 "AME-LIN-1": { nombre: "FAMILIA AMELIA LINARES", pases: 1 },
 "ESC-3": { nombre: "FAMILIA ESCALERA", pases: 3 },
 "GON-LUN-4": { nombre: "FAMILIA GONZALEZ LUNA", pases: 4 },
-"MAR-2": { nombre: "FAMILIA MARTINEZ", pases: 2 },
+"MAR-LUC-2": { nombre: "FAMILIA MARTINEZ LUCERO", pases: 2 },
 "OMA-3": { nombre: "OMAR", pases: 3 },
 "ROD-TAP-2": { nombre: "FAMILIA RODRIGUEZ TAPIA", pases: 2 },
 "GAM-1": { nombre: "GAMA", pases: 1 },
