@@ -85,7 +85,7 @@ const API_URL="https://script.google.com/macros/s/AKfycbwO7JePAvKZgcBNSXi1BUmB46
 "GAM-1": { nombre: "GAMA", pases: 1 },
 "ORO-MAC-2": { nombre: "FAMILIA OROZCO MACEDA", pases: 2 },
 "ROD-TAP-2": { nombre: "FAMILIA RODRIGUEZ TAPIA", pases: 2 },
-    "PRUEB-10": { nombre: "FAMILIA PRUEBA", pases: 10 },
+    "PRU-10": { nombre: "FAMILIA PRUEBA", pases: 10 },
     };
 
     const params = new URLSearchParams(window.location.search);
