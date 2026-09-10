@@ -2,7 +2,11 @@ window.onload = async function() {
 
     // 1. CONFIGURACIÓN DEL PUENTE CON TU HOJA DE GOOGLE SHEETS
 
-const API_URL="https://script.google.com/macros/s/AKfycbw76pVcOXDmNHayxJFGmmzboo8oAZ5CNDBS6BUH9PaauO29h7P4MeSBgvXu2UUQcwOnrQ/exec";
+// Anterior:
+// const API_URL="https://script.google.com/macros/s/AKfycbw76pVcOXDmNHayxJFGmmzboo8oAZ5CNDBS6BUH9PaauO29h7P4MeSBgvXu2UUQcwOnrQ/exec";
+
+// Nuevo:
+const API_URL="https://script.google.com/macros/s/AKfycbwO7JePAvKZgcBNSXi1BUmB46tKtZ9tgSNpUHXFpLYx-sa4I-lBVy89Ob7ICONWL0CijA/exec";
 
 
     // BASE DE DATOS LOCAL (Mapeo de IDs y límite de pases)
