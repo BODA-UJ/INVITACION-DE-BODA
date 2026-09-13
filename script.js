@@ -67,7 +67,7 @@ window.onload = async function() {
         "PRA-CAR-4": { nombre: "FAMILIA PRADO CARRILLO", pases: 4 },
         "FAR-HER-4": { nombre: "FAMILIA FARFAN HERNANDEZ", pases: 4 },
         "FAR-LOP-2": { nombre: "FAMILIA FARFAN LOPEZ", pases: 2 },
-        "LOE-2": { nombre: "FAMILIA LOEZA", pases: 2 },
+        "LOE-3": { nombre: "FAMILIA LOEZA", pases: 3 },
         "EZI-1": { nombre: "ZIQUIA", pases: 1 },
         "MAR-ARZ-1": { nombre: "FAMILIA MARIA ARZATE", pases: 1 },
         "AME-LIN-1": { nombre: "FAMILIA AMELIA LINARES", pases: 1 },
