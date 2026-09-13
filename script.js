@@ -318,6 +318,26 @@ const API_URL="https://script.google.com/macros/s/AKfycbwO7JePAvKZgcBNSXi1BUmB46
             btnEnviar.disabled = true;
         }
 
+        // Limpiar espacios en los nombres
+        const inputsNombres = document.querySelectorAll('.nombre-validar');
+        inputsNombres.forEach(input => {
+            input.value = input.value.trim();
+        });
+
+        // 1. GUARDAR EN LOCALSTORAGE ANTES DE ENVIAR
+        if (invitadoID) {
+            localStorage.setItem('confirmado_' + invitadoID, 'true');
+        }
+
+        // 2. ENVIAR EL FORMULARIO
+        formRSVP.submit();
+
+        // 3. BLOQUEAR LA INTERFAZ
+        bloquearFormularioManual();
+    };
+}
+
+
         // Limpiar espacios en blanco de los nombres
         const inputsNombres = document.querySelectorAll('.nombre-validar');
         inputsNombres.forEach(input => {
