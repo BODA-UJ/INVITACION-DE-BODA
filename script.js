@@ -26,7 +26,7 @@ window.onload = async function() {
         "PIN-ESP-4": { nombre: "FAMILIA PINEDA ESPINOZA", pases: 4 },
         "CAL-AVI-3": { nombre: "FAMILIA CALDERON AVILES", pases: 3 },
         "TIN-7": { nombre: "FAMILIA TINOCO", pases: 7 },
-        "ROJ-2": { nombre: "FAMILIA ROJAS", pases: 2 },
+        "RO-2": { nombre: "FAMILIA ROJAS", pases: 2 },
         "MOR-CAR-3": { nombre: "FAMILIA MORENO CARVAJAL", pases: 3 },
         "GAR-RAN-5": { nombre: "FAMILIA GARCIA RANGEL", pases: 5 },
         "GOM-3": { nombre: "FAMILIA GOMEZ", pases: 3 },
