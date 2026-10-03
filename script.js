@@ -46,7 +46,7 @@ window.onload = async function() {
         "GAR--2": { nombre: "FAMILIA GARCIA ", pases: 2 },
         "TOL-2": { nombre: "FAMILIA TOLEDO", pases: 2 },
         "RUI-RUI-2": { nombre: "FAMILIA RUIZ RUIZ", pases: 2 },
-        "NAT-BEC-1": { nombre: "FAMILIA NATALY BECERRA", pases: 1 },
+        "NAT-BE-1": { nombre: "FAMILIA NATALY BECERRA", pases: 1 },
         "LUYKA-2": { nombre: "FAMILIA GARCIA (LUIS Y KARLA)", pases: 2 },
         "LIZ-COR-2": { nombre: "FAMILIA LIZARRAGA CORAL", pases: 2 },
         "CAS-2": { nombre: "FAMILIA CASTILLO", pases: 2 },
