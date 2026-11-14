@@ -80,6 +80,7 @@ window.onload = async function() {
         "ORO-MAC-2": { nombre: "FAMILIA OROZCO MACEDA", pases: 2 },
         "RO-TAP-2": { nombre: "FAMILIA RODRIGUEZ TAPIA", pases: 2 },
         "PR-10": { nombre: "FAMILIA PRUEBA", pases: 10 },
+        "ES-MAR-2": { nombre: "FAMILIA ESCALANTE MARTINEZ", pases: 2 },
     };
 
     const params = new URLSearchParams(window.location.search);
