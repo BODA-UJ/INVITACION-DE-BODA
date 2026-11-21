@@ -81,6 +81,7 @@ window.onload = async function() {
         "RO-TAP-2": { nombre: "FAMILIA RODRIGUEZ TAPIA", pases: 2 },
         "PR-10": { nombre: "FAMILIA PRUEBA", pases: 10 },
         "ES-MAR-2": { nombre: "FAMILIA ESCALANTE MARTINEZ", pases: 2 },
+        "OR-RO-2": { nombre: "FAMILIA OROZCO RODRIGUEZ", pases: 2 },
     };
 
     const params = new URLSearchParams(window.location.search);
